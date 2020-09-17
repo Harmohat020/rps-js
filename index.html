@@ -9,51 +9,58 @@
   <!--Bootstrap-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
   <!--Custom CSS -->
-  <link href="style.css" rel="stylesheet">
-  <!--JQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="./assets/styles/style.css" rel="stylesheet">
 </head>
 <body>
   <center>
+      <!--Begin Screen-->
       <h1 id="title">Rock, Paper, Scissors</h1>
       <h4 id="title">Can you beat The Computer?!</h4>
-      <h1 id="title-choose" style="display:none;">Choose your option:</h1>
-        <button type="button" id="Rock" value="Rock" style="display:none;"><img src="rock.png"></button>
-        <button type="button" id="Paper" value="Paper" style="display:none;"><img src="paper.png"></button>
-        <button type="button" id="Scissors" value="Scissors" style="display:none;"><img src="scissors.png"></button>
+      <!--After begin screen user can choose 3 options-->
+      <h1 id="title-choose">Choose your option:</h1>
+        <button type="button" id="Rock" value="Rock"><img src="rock.png"></button>
+        <button type="button" id="Paper" value="Paper"><img src="paper.png"></button>
+        <button type="button" id="Scissors" value="Scissors"><img src="scissors.png"></button>
+        <!--Play Button that belongs to the begin screen-->
       <button type="button" class="btn btn-info" id="play" style="margin-top:100px;">Play</button>
   </center>
 
-<div class="score">
-  <div class="card" style="background:transparent;">
-    <div id="player-score">
-      <h2 id="player-title" style="display:none;">You:</h2>
-      <img src="rock.png" style="display:none;" id="player-rockImg">
-      <img src="paper.png"  style="display:none;" id="player-paperImg">
-      <img src="scissors.png"  style="display:none;" id="player-scissorsImg">
+  <div class="score">
+    <!--Shows the option of the player-->
+    <div class="card" style="background:transparent;">
+      <div id="player-score">
+        <h2 id="player-title">You:</h2>
+        <img src="rock.png" id="player-rockImg">
+        <img src="paper.png" id="player-paperImg">
+        <img src="scissors.png"  id="player-scissorsImg">
+      </div>
+    </div>
+     <!--Shows the option of the computer-->
+    <div class="card" style="background:transparent;">
+      <div id="computer-score">
+        <h2 id="computer-title">Computer:</h2>
+        <img src="rock.png" id="computer-rockImg">
+        <img src="paper.png" id="computer-paperImg">
+        <img src="scissors.png" id="computer-scissorsImg">
+      </div>
     </div>
   </div>
-  <div class="card" style="background:transparent;">
-    <div id="computer-score">
-      <h2 id="computer-title" style="display:none;">Computer:</h2>
-      <img src="rock.png" style="display:none;" id="computer-rockImg">
-      <img src="paper.png"  style="display:none;" id="computer-paperImg">
-      <img src="scissors.png"  style="display:none;" id="computer-scissorsImg">
-    </div>
+  <br>
+
+  <div id="results">
+    <!--Shows the option in text-->
+    <p id="options"></p>
+    <!--Shows the result in text-->
+    <p id="result"></p>
   </div>
-</div>
-<br>
 
-<div id="results" style="display:none;">
-  <p id="options"></p>
-  <p id="result"></p>
-</div>
-
-<center>
- <button type="button" class="btn btn-info" id="playAgain" style="margin-top:100px;display:none;">Play Again</button>
-</center>
-
-  <script src="animate.js"></script>
-  <script src="script.js"></script>
+  <center>
+     <button type="button" class="btn btn-info" id="playAgain">Play Again</button>
+  </center>
+  
+  <!--JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./assets/js/animate.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>

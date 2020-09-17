@@ -17,7 +17,6 @@ var options = ["Rock", "Paper", "Scissors"];
 var computer = {
   option: options[Math.floor(Math.random()*options.length)]
 };
-console.log(`computer: ${computer.option}`);
 
 //if one of the three buttons is clicked, two functions are passed on
 document.getElementById("Rock").addEventListener("click", function(){
@@ -94,7 +93,7 @@ var scissorsResult = function() {
 function computerImgFadeIn(){
   if (computer.option == "Rock") {
      $("#Rock, #Scissors, #Paper, #title-choose").fadeOut().promise().done(function() {
-        $("#computer-rockImg").fadeIn(2000);
+       $("#computer-rockImg").fadeIn(2000);
      });
   }else if (computer.option == "Paper") {
      $("#Rock, #Scissors, #Paper, #title-choose").fadeOut().promise().done(function() {
@@ -102,7 +101,7 @@ function computerImgFadeIn(){
      });
   }else if (computer.option == "Scissors") {
      $("#Rock, #Scissors, #Paper, #title-choose").fadeOut().promise().done(function() {
-      $("#computer-scissorsImg").fadeIn(2000);
+       $("#computer-scissorsImg").fadeIn(2000);
      });
   }
 }
